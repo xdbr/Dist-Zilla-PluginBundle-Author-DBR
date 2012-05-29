@@ -18,22 +18,16 @@ class Dist::Zilla::PluginBundle::DBR with Dist::Zilla::Role::PluginBundle::Easy 
         );
 
         $self->add_plugins(
-            'AutoPrereqs',
+            'ConfirmRelease',
+            'EOLTests',
             'MetaJSON',
             'ModuleBuild',
-            'PodWeaver',
-            'ReadmeFromPod',
-            'Test::Compile',
-            'AutoPrereqs',
+            'NoTabsTests',
             'PkgVersion',
             'PodCoverageTests',
             'PodSyntaxTests',
-            'NoTabsTests',
-            'EOLTests',
-            'Test::Compile',
+            'ReadmeFromPod',
             'TestRelease',
-            'ConfirmRelease',
-            'PodWeaver',
         );
     }
 }
