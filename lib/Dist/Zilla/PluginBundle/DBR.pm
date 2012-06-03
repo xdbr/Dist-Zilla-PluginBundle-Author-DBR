@@ -25,6 +25,11 @@ class Dist::Zilla::PluginBundle::DBR with Dist::Zilla::Role::PluginBundle::Easy 
             'NoTabsTests',
             'ReadmeFromPod',
             'TestRelease',
+            'AutoPrereqs',
+            'Test::ReportPrereqs',
+            'Test::Portability',
+            'Test::Kwalitee',
+            'Test::CheckDeps',
         );
     }
 }
@@ -38,19 +43,24 @@ __END__
 This PluginBundle is roughly equivalent to the following C<dist.ini>:
 
   # dist.ini
-  [@Basic]
+  [@Classic]
   [Authority]
       authority = cpan:DBR
 
   [AutoPrereqs]
   [PkgVersion]
-  [PodCoverageTests]
-  [PodSyntaxTests]
-  [NoTabsTests]
-  [EOLTests]
-  [Test::Compile]
   [TestRelease]
   [ConfirmRelease]
   [PodWeaver]
 
+  [Test::Compile]
+  [Test::ReportPrereqs]
+  [Test::Portability]
+  [Test::Kwalitee]
+  [Test::CheckDeps]
+  [PodCoverageTests]
+  [PodSyntaxTests]
+  [NoTabsTests]
+  [EOLTests]
+  
 =cut
