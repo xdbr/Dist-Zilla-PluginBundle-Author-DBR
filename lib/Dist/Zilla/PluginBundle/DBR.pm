@@ -23,8 +23,6 @@ class Dist::Zilla::PluginBundle::DBR with Dist::Zilla::Role::PluginBundle::Easy 
             'MetaJSON',
             'ModuleBuild',
             'NoTabsTests',
-            'PkgVersion',
-            'PodCoverageTests',
             'PodSyntaxTests',
             'ReadmeFromPod',
             'TestRelease',
