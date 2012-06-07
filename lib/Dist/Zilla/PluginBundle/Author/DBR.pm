@@ -5,10 +5,10 @@ package Dist::Zilla::PluginBundle::Author::DBR; # Make CPAN happy
 
 use MooseX::Declare;
 
-class Dist::Zilla::PluginBundle::Author::DBR 
- with Dist::Zilla::Role::PluginBundle::Easy 
+class Dist::Zilla::PluginBundle::Author::DBR
+ with Dist::Zilla::Role::PluginBundle::Easy
 {
-    
+
     use Dist::Zilla::PluginBundle::Filter;
 
     method configure {
@@ -65,5 +65,5 @@ This PluginBundle is roughly equivalent to the following C<dist.ini>:
   [PodSyntaxTests]
   [NoTabsTests]
   [EOLTests]
-  
+
 =cut
