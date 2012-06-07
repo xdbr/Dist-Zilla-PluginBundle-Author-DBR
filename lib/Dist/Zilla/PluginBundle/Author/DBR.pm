@@ -31,7 +31,6 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'AutoPrereqs',
             'Test::ReportPrereqs',
             'Test::Portability',
-            'Test::Kwalitee',
             'Test::CheckDeps',
         );
     }
