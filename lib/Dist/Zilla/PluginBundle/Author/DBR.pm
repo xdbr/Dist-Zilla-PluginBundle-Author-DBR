@@ -1,11 +1,14 @@
-package Dist::Zilla::PluginBundle::DBR; # Make CPAN happy
+package Dist::Zilla::PluginBundle::Author::DBR; # Make CPAN happy
 
-#  PODNAME: Dist::Zilla::PluginBundle::DBR
+#  PODNAME: Dist::Zilla::PluginBundle::Author::DBR
 # ABSTRACT: DBRs Dist::Zilla PluginBundle
 
 use MooseX::Declare;
 
-class Dist::Zilla::PluginBundle::DBR with Dist::Zilla::Role::PluginBundle::Easy {
+class Dist::Zilla::PluginBundle::Author::DBR 
+ with Dist::Zilla::Role::PluginBundle::Easy 
+{
+    
     use Dist::Zilla::PluginBundle::Filter;
 
     method configure {
