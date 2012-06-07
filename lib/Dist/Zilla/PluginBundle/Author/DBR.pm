@@ -16,8 +16,9 @@ class Dist::Zilla::PluginBundle::Author::DBR
         $self->add_bundle(
             Filter => {
                 -bundle => '@Classic',
-                -remove => [qw/MakeMaker PkgVersion PodVersion Readme/],
-            }
+                -remove => [qw/MakeMaker PkgVersion PodVersion Readme ExtraTests/],
+            },
+            # 'Apocalyptic',
         );
 
         $self->add_plugins(
@@ -32,6 +33,25 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'Test::ReportPrereqs',
             'Test::Portability',
             'Test::CheckDeps',
+            'Test::Legal',
+            'ReportPhase',
+            'ReportVersions',
+            'Test::Perl::Critic',
+            'MinimumVersionTests',
+            'CheckPrereqsIndexed',
+            'CheckVersionIncrement',
+            'SpellingCommonMistakesTests',
+            'Test::UseAllModules',
+            'ChangeStats::Git',
+            'MetaProvides::Class',
+            'Test::CheckManifest',
+            'SchwartzRatio',
+            'MetaTests',
+            [ 'InstallRelease' => {'install_command' => 'cpanm --verbose .'} ],
+            # 'CheckChangeLog',
+            # 'CheckChangesHasContent',
+            # 'CheckExtraTests',
+            # 'RunExtraTests',
         );
     }
 }
@@ -44,25 +64,37 @@ __END__
 
 This PluginBundle is roughly equivalent to the following C<dist.ini>:
 
-  # dist.ini
-  [@Classic]
-  [Authority]
+    # dist.ini
+    [@Basic]
+    [Authority]
       authority = cpan:DBR
 
-  [AutoPrereqs]
-  [PkgVersion]
-  [TestRelease]
-  [ConfirmRelease]
-  [PodWeaver]
+    [AutoPrereqs]
+    [PkgVersion]
+    [PodCoverageTests]
+    [PodSyntaxTests]
+    [NoTabsTests]
+    [EOLTests]
+    [Test::Compile]
+    [TestRelease]
+    [ConfirmRelease]
+    [PodWeaver]
+    [Test::Legal]
+    [ReportPhase]
+    [ReportVersions]
+    [Test::Perl::Critic]
+    [ReadmeFromPod]
+    [Test::MinimumVersion]
+    [CheckPrereqsIndexed]
+    [CheckVersionIncrement]
+    [SpellingCommonMistakesTests]
+    [MetaProvides::Class]
+    [Test::CheckManifest]
+    [SchwartzRatio]
+    [Test::UseAllModules]
+    [MetaTests]
+    [InstallRelease]
+    install_command = cpanm .
 
-  [Test::Compile]
-  [Test::ReportPrereqs]
-  [Test::Portability]
-  [Test::Kwalitee]
-  [Test::CheckDeps]
-  [PodCoverageTests]
-  [PodSyntaxTests]
-  [NoTabsTests]
-  [EOLTests]
 
 =cut
