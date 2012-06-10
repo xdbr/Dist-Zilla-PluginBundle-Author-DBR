@@ -47,7 +47,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'RunExtraTests',
             'InstallGuide',
             'PodWeaver',
-            'InstallRelease',
+            [ 'InstallRelease'    => { 'install_command'  => 'cpanm'              } ],
             [ 'PruneCruft'        => { 'except'           => '\.gitignore'        } ],
             [ 'ExecDir'           => { 'dir'              => 'bin'                } ],
 
@@ -108,6 +108,7 @@ This PluginBundle is roughly equivalent to the following C<dist.ini>:
     [PodWeaver]
 
     [InstallRelease]
+      install_command  = cpanm
 
     [PruneCruft]
       except = '.gitignore'
