@@ -37,7 +37,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'ReportPhase',
             'ReportVersions',
             'Test::Perl::Critic',
-            'MinimumVersionTests',
+            'Test::MinimumVersion',
             'CheckPrereqsIndexed',
             'CheckVersionIncrement',
             'SpellingCommonMistakesTests',
