@@ -47,7 +47,6 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'RunExtraTests',
             'InstallGuide',
             'PodWeaver',
-            [ 'InstallRelease'    => { 'install_command'  => 'cpanm'              } ],
             [ 'PruneCruft'        => { 'except'           => '\.gitignore'        } ],
             [ 'ExecDir'           => { 'dir'              => 'bin'                } ],
 
@@ -61,6 +60,8 @@ class Dist::Zilla::PluginBundle::Author::DBR
             # [ 'Test::Portability' => { 'test_vms_length'  => 0,
             #                            'test_ansi_chars'  => 0,
             #                            'test_one_dot'     => 0                    } ],
+            # [ 'InstallRelease'    => { 'install_command'  => 'cpanm'              } ],
+            
         );
     }
 }
