@@ -23,6 +23,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
         );
 
         $self->add_plugins(
+            'Authority',
             'ConfirmRelease',
             'EOLTests',
             'MetaJSON',
