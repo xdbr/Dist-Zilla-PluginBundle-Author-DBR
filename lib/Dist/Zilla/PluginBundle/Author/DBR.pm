@@ -47,6 +47,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'RunExtraTests',
             'InstallGuide',
             'PodWeaver',
+            'MetaProvides::Package',
             [ 'PruneCruft' => { 'except'    => '\.gitignore'  } ],
             [ 'ExecDir'    => { 'dir'       => 'bin'          } ],
             [ 'Authority'  => { 'authority' => 'cpan:DBR'     }],
