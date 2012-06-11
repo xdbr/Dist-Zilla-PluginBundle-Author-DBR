@@ -23,7 +23,6 @@ class Dist::Zilla::PluginBundle::Author::DBR
         );
 
         $self->add_plugins(
-            'Authority',
             'ConfirmRelease',
             'EOLTests',
             'MetaJSON',
@@ -48,9 +47,9 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'RunExtraTests',
             'InstallGuide',
             'PodWeaver',
-            [ 'PruneCruft'        => { 'except'           => '\.gitignore'        } ],
-            [ 'ExecDir'           => { 'dir'              => 'bin'                } ],
-
+            [ 'PruneCruft' => { 'except'    => '\.gitignore'  } ],
+            [ 'ExecDir'    => { 'dir'       => 'bin'          } ],
+            [ 'Authority'  => { 'authority' => 'cpan:DBR'     }],
             # 'Test::Legal',
             # 'ExtraTests',
             # 'Test::Perl::Critic',
