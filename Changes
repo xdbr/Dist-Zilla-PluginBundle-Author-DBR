@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+0.900     2013-07-04 00:23:54 Europe/Berlin
+
     - Finally getting Dist::Zilla::Role::PluginBundle::Merged under control...
 
 0.842     2013-07-03 23:20:21 Europe/Berlin
