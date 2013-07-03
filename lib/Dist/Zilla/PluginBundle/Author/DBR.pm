@@ -3,13 +3,8 @@ package Dist::Zilla::PluginBundle::Author::DBR; # Make CPAN happy
 #  PODNAME: Dist::Zilla::PluginBundle::Author::DBR
 # ABSTRACT: DBRs Dist::Zilla PluginBundle
 
-# package Dist::Zilla::PluginBundle::Foobar;
-# Moose::with 'Dist::Zilla::Role::PluginBundle::Merged';
-# sub configure { shift->add_merged( qw[ Plugin1 Plugin2 Plugin3 Plugin4 ] ); }
-
-
-use MooseX::Declare;
 use true;
+use MooseX::Declare;
 
 class Dist::Zilla::PluginBundle::Author::DBR
  with Dist::Zilla::Role::PluginBundle::Merged
