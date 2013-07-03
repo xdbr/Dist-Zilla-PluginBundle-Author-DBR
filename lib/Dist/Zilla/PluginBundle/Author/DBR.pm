@@ -22,36 +22,63 @@ class Dist::Zilla::PluginBundle::Author::DBR
 
         $self->add_merged(
             qw[
-                =Dist::Zilla::Plugin::ConfirmRelease
-                =Dist::Zilla::Plugin::EOLTests
-                =Dist::Zilla::Plugin::MetaJSON
-                =Dist::Zilla::Plugin::ModuleBuild
-                =Dist::Zilla::Plugin::NoTabsTests
-                =Dist::Zilla::Plugin::ReadmeFromPod
-                =Dist::Zilla::Plugin::TestRelease
-                =Dist::Zilla::Plugin::AutoPrereqs
-                =Dist::Zilla::Plugin::Test::ReportPrereqs
-                =Dist::Zilla::Plugin::Test::CheckDeps
-                =Dist::Zilla::Plugin::ReportPhase
-                =Dist::Zilla::Plugin::ReportVersions
-                =Dist::Zilla::Plugin::Test::MinimumVersion
-                =Dist::Zilla::Plugin::CheckPrereqsIndexed
-                =Dist::Zilla::Plugin::CheckVersionIncrement
-                =Dist::Zilla::Plugin::SpellingCommonMistakesTests
-                =Dist::Zilla::Plugin::Test::UseAllModules
-                =Dist::Zilla::Plugin::MetaProvides::Class
-                =Dist::Zilla::Plugin::SchwartzRatio
-                =Dist::Zilla::Plugin::MetaTests
-                =Dist::Zilla::Plugin::CheckExtraTests
-                =Dist::Zilla::Plugin::RunExtraTests
-                =Dist::Zilla::Plugin::InstallGuide
-                =Dist::Zilla::Plugin::PodWeaver
-                =Dist::Zilla::Plugin::MetaProvides::Package
+                AutoPrereqs
+                CheckChangesHasContent
+                CheckExtraTests
+                CheckPrereqsIndexed
+                CheckVersionIncrement
+                ConfirmRelease
+                EOLTests
+                InstallGuide
+                MetaJSON
+                MetaProvides::Class
+                MetaTests
+                ModuleBuild
+                NextRelease
+                NoTabsTests
+                PodWeaver
+                ReadmeFromPod
+                ReportVersions
+                RunExtraTests
+                SchwartzRatio
+                ShareDir::Tarball
+                SpellingCommonMistakesTests
+                Test::ChangesHasContent
+                Test::CheckDeps
+                Test::CheckManifest
+                Test::MinimumVersion
+                Test::ReportPrereqs
+                Test::UseAllModules
+                TestRelease
             ],
-            PruneCruft => { 'except'    => '\.gitignore'  },
-            ExecDir    => { 'dir'       => 'bin'          },
-            Authority  => { 'authority' => 'cpan:DBR'     }
-            # 'Test::Legal',
+            'Authority' => {
+                authority => 'cpan:DBR'
+            },
+            '@Git'      => {
+                changelog        => 'Changes'      ,       # this is the default
+                allow_dirty      => 'dist.ini'     ,       # see Git::Check...
+                allow_dirty      => 'Changes'      ,       # ... and Git::Commit
+                commit_msg       => 'v%v%n%n%c'    ,       # see Git::Commit
+                tag_format       => '%v'           ,       # see Git::Tag
+                tag_message      => '%v'           ,       # see Git::Tag
+                push_to          => 'origin'       ,       # see Git::Push
+            },
+            'Test::Portability' => {
+                test_vms_length  => '0',
+                test_ansi_chars  => '0',
+                test_one_dot     => '0',
+            },
+            'PruneCruft' => {
+                except => '\.gitignore'
+            },
+            'ExecDir'    => {
+                dir => 'bin'
+            },
+            'InstallRelease' => {
+                install_command  => 'cpanm \.'
+            }
+
+            # '',
             # 'ExtraTests',
             # 'Test::Perl::Critic',
             # 'CheckChangeLog',
