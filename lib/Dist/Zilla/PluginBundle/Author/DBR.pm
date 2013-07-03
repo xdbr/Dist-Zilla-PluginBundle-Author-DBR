@@ -94,45 +94,125 @@ This PluginBundle is roughly equivalent to the following C<dist.ini>:
 
     # dist.ini
     [@Filter]
-      -bundle = @Classic
-      -remove = ExtraTests
-      -remove = PodVersion
+    -bundle          = @Classic
+    -remove          = ExtraTests
+    -remove          = PodVersion
 
     [Authority]
-        authority = cpan:DBR
+    authority        = cpan:DBR
 
-    [ConfirmRelease]
-    [EOLTests]
-    [MetaJSON]
-    [ModuleBuild]
-    [NoTabsTests]
-    [ReadmeFromPod]
-    [TestRelease]
-    [AutoPrereqs]
-    [Test::ReportPrereqs]
-    [Test::CheckDeps]
-    [ReportPhase]
-    [ReportVersions]
-    [Test::MinimumVersion]
-    [CheckPrereqsIndexed]
-    [CheckVersionIncrement]
-    [SpellingCommonMistakesTests]
-    [Test::UseAllModules]
-    [MetaProvides::Class]
-    [SchwartzRatio]
-    [MetaTests]
-    [CheckExtraTests]
-    [RunExtraTests]
-    [InstallGuide]
-    [PodWeaver]
+    [AutoMetaResources]
+    repository.github   = user:xdbr
+    homepage            = https://metacpan.org/module/%{dist}
 
-    [InstallRelease]
-      install_command  = cpanm
+
+    [@Git]
+    changelog        = Changes             ; this is the default
+    allow_dirty      = dist.ini            ; see Git::Check...
+    allow_dirty      = Changes             ; ... and Git::Commit
+    commit_msg       = v%v%n%n%c           ; see Git::Commit
+    tag_format       = %v                  ; see Git::Tag
+    tag_message      = %v                  ; see Git::Tag
+    push_to          = origin              ; see Git::Push
+
+    [Test::Portability]
+    test_vms_length  = 0
+    test_ansi_chars  = 0
+    test_one_dot     = 0
 
     [PruneCruft]
-      except = '.gitignore'
+    except           = '.gitignore'
 
     [ExecDir]
-      dir= bin
+    dir              = bin
+
+    [InstallRelease]
+    install_command  = cpanm .
+
+    [AutoPrereqs]
+    [CheckChangesHasContent]
+    [CheckExtraTests]
+    [CheckPrereqsIndexed]
+    [CheckVersionIncrement]
+    [ConfirmRelease]
+    [EOLTests]
+    [HasVersionTests]
+    [InstallGuide]
+    [MetaJSON]
+    [MetaProvides::Class]
+    [MetaTests]
+    [ModuleBuild]
+    [NextRelease]
+    [NoTabsTests]
+    [PodWeaver]
+    [ReadmeFromPod]
+    [ReportVersions]
+    [RunExtraTests]
+    [SchwartzRatio]
+    [ShareDir::Tarball]
+    [SpellingCommonMistakesTests]
+    [Test::ChangesHasContent]
+    [Test::CheckDeps]
+    [Test::CheckManifest]
+    [Test::MinimumVersion]
+    [Test::ReportPrereqs]
+    [Test::UseAllModules]
+    [TestRelease]
+
+
+    [Prereqs]
+    Dist::Zilla                                       = 0
+    Dist::Zilla::Plugin::Authority                    = 0
+    Dist::Zilla::Plugin::AutoMetaResources            = 0
+    Dist::Zilla::Plugin::AutoPrereqs                  = 0
+    Dist::Zilla::Plugin::CheckChangeLog               = 0
+    Dist::Zilla::Plugin::CheckChangesHasContent       = 0
+    Dist::Zilla::Plugin::CheckExtraTests              = 0
+    Dist::Zilla::Plugin::CheckPrereqsIndexed          = 0
+    Dist::Zilla::Plugin::CheckVersionIncrement        = 0
+    Dist::Zilla::Plugin::ConfirmRelease               = 0
+    Dist::Zilla::Plugin::EOLTests                     = 0
+    Dist::Zilla::Plugin::HasVersionTests              = 0
+    Dist::Zilla::Plugin::InstallGuide                 = 0
+    Dist::Zilla::Plugin::InstallRelease               = 0
+    Dist::Zilla::Plugin::MetaJSON                     = 0
+    Dist::Zilla::Plugin::MetaProvides::Class          = 0
+    Dist::Zilla::Plugin::MetaProvides::Package        = 0
+    Dist::Zilla::Plugin::MetaTests                    = 0
+    Dist::Zilla::Plugin::MinimumPerl                  = 0
+    Dist::Zilla::Plugin::ModuleBuild                  = 0
+    Dist::Zilla::Plugin::NextRelease                  = 0
+    Dist::Zilla::Plugin::NoTabsTests                  = 0
+    Dist::Zilla::Plugin::PkgVersion                   = 0
+    Dist::Zilla::Plugin::PodCoverageTests             = 0
+    Dist::Zilla::Plugin::PodSyntaxTests               = 0
+    Dist::Zilla::Plugin::PodWeaver                    = 0
+    Dist::Zilla::Plugin::ReadmeFromPod                = 0
+    Dist::Zilla::Plugin::ReportPhase                  = 0
+    Dist::Zilla::Plugin::ReportVersions               = 0
+    Dist::Zilla::Plugin::Run::Release                 = 0
+    Dist::Zilla::Plugin::RunExtraTests                = 0
+    Dist::Zilla::Plugin::SchwartzRatio                = 0
+    Dist::Zilla::Plugin::ShareDir::Tarball            = 0
+    Dist::Zilla::Plugin::SpellingCommonMistakesTests  = 0
+    Dist::Zilla::Plugin::TaskWeaver                   = 0
+    Dist::Zilla::Plugin::Test::ChangesHasContent      = 0
+    Dist::Zilla::Plugin::Test::CheckDeps              = 0
+    Dist::Zilla::Plugin::Test::CheckManifest          = 0
+    Dist::Zilla::Plugin::Test::Compile                = 0
+    Dist::Zilla::Plugin::Test::Legal                  = 0
+    Dist::Zilla::Plugin::Test::MinimumVersion         = 0
+    Dist::Zilla::Plugin::Test::Perl::Critic           = 0
+    Dist::Zilla::Plugin::Test::Portability            = 0
+    Dist::Zilla::Plugin::Test::ReportPrereqs          = 0
+    Dist::Zilla::Plugin::Test::UseAllModules          = 0
+    Dist::Zilla::Plugin::TestRelease                  = 0
+    Dist::Zilla::PluginBundle::Git                    = 0
+    Dist::Zilla::Role::PluginBundle::Merged           = 0
+    Pod::Weaver::Plugin::Encoding                     = 0
+    Pod::Weaver::Plugin::WikiDoc                      = 0
+    Test::CPAN::Meta                                  = 0
+    Test::UseAllModules                               = 0
+
 
 =cut
