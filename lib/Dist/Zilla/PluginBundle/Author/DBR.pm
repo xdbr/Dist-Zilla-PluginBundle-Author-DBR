@@ -19,7 +19,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
             },
             # 'Apocalyptic',
         );
-    
+
         $self->add_merged(
             qw[
                 =Dist::Zilla::Plugin::ConfirmRelease
