@@ -22,6 +22,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
 
         $self->add_merged(
             qw[
+                AutoMetaResources
                 AutoPrereqs
                 CheckChangesHasContent
                 CheckExtraTests
@@ -29,6 +30,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 CheckVersionIncrement
                 ConfirmRelease
                 EOLTests
+                HasVersionTests
                 InstallGuide
                 MetaJSON
                 MetaProvides::Class
@@ -50,6 +52,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 Test::ReportPrereqs
                 Test::UseAllModules
                 TestRelease
+
             ],
             'Authority' => {
                 authority => 'cpan:DBR'
@@ -77,18 +80,6 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'InstallRelease' => {
                 install_command  => 'cpanm \.'
             }
-
-            # '',
-            # 'ExtraTests',
-            # 'Test::Perl::Critic',
-            # 'CheckChangeLog',
-            # 'CheckChangesHasContent',
-            # 'ChangeStats::Git',
-            # 'Test::CheckManifest',
-            # 'Test::Portability' => {  'test_vms_length'  => 0,
-            #                           'test_ansi_chars'  => 0,
-            #                           'test_one_dot'     => 0                   },
-            # 'InstallRelease'    => { 'install_command'  => 'cpanm'              },
         );
     }
 }
