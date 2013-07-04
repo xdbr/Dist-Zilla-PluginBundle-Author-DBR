@@ -1,4 +1,7 @@
 {{$NEXT}}
+    - Remove [AutoMetaResources] again, seems to not work in vanilla dist.
+
+0.930     2013-07-04 08:59:41 Europe/Berlin
 
     - Add more information to [AutoMetaResources]
     
