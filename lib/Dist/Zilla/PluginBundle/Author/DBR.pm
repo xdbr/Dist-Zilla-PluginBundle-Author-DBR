@@ -57,6 +57,13 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'Authority' => {
                 authority => 'cpan:DBR'
             },
+            'AutoMetaResources' => {
+                'homepage'        => 'https://metacpan.org/module/%{dist}',
+                'repository.type' => 'git',
+                'repository.url'  => 'git://github.com/xdbr/%{dist}.git',
+                'repository.web'  => 'http://github.com/xdbr/%{dist}',
+                'bugtracker.web'  => 'http://github.com/xdbr/%{dist}/issues',
+            },
             '@Git'      => {
                 changelog        => 'Changes'      ,       # this is the default
                 allow_dirty      => 'dist.ini'     ,       # see Git::Check...
@@ -102,8 +109,11 @@ This PluginBundle is roughly equivalent to the following C<dist.ini>:
     authority        = cpan:DBR
 
     [AutoMetaResources]
-    repository.github   = user:xdbr
     homepage            = https://metacpan.org/module/%{dist}
+    repository.type     = git
+    repository.url      = git://github.com/xdbr/%{dist}.git
+    repository.web      = http://github.com/xdbr/%{dist}
+    bugtracker.web      = http://github.com/xdbr/%{dist}/issues
 
 
     [@Git]
