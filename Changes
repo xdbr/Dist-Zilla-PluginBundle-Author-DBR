@@ -1,10 +1,14 @@
 {{$NEXT}}
+
     - Remove [AutoMetaResources] again, seems to not work in vanilla dist.
+    - Let's just try again with AutoMetaResources
+    - Change to semantic versioning
+    - add Dist::Zilla::Test::CPAN::Changes
 
 0.930     2013-07-04 08:59:41 Europe/Berlin
 
     - Add more information to [AutoMetaResources]
-    
+
 0.920     2013-07-04 00:30:45 Europe/Berlin
 
     - Add Documentation
@@ -14,9 +18,9 @@
     - Finally getting Dist::Zilla::Role::PluginBundle::Merged under control...
 
 0.842     2013-07-03 23:20:21 Europe/Berlin
- 
+
     - Adding Changes stuff.
-  
+
 0.840
 
     - This was the beginning, back in the days, when no Changelog was kept.

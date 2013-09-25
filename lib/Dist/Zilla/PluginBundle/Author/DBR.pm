@@ -51,19 +51,20 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 Test::MinimumVersion
                 Test::ReportPrereqs
                 Test::UseAllModules
+                Test::CPAN::Changes
                 TestRelease
 
             ],
             'Authority' => {
                 authority => 'cpan:DBR'
             },
-            # 'AutoMetaResources' => {
-            #     'homepage'        => 'https://metacpan.org/module/%{dist}',
-            #     'repository.type' => 'git',
-            #     'repository.url'  => 'git://github.com/xdbr/%{dist}.git',
-            #     'repository.web'  => 'http://github.com/xdbr/%{dist}',
-            #     'bugtracker.web'  => 'http://github.com/xdbr/%{dist}/issues',
-            # },
+            'AutoMetaResources' => {
+                'homepage'        => 'https://metacpan.org/module/%{dist}',
+                'repository.type' => 'git',
+                'repository.url'  => 'git://github.com/xdbr/%{dist}.git',
+                'repository.web'  => 'http://github.com/xdbr/%{dist}',
+                'bugtracker.web'  => 'http://github.com/xdbr/%{dist}/issues',
+            },
             '@Git'      => {
                 changelog        => 'Changes'      ,       # this is the default
                 allow_dirty      => 'dist.ini'     ,       # see Git::Check...
