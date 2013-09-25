@@ -30,7 +30,6 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 CheckVersionIncrement
                 ConfirmRelease
                 EOLTests
-                GithubMeta
                 HasVersionTests
                 InstallGuide
                 MetaJSON
@@ -59,10 +58,13 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'Authority' => {
                 authority => 'cpan:DBR'
             },
-            'AutoMetaResources' => {
-                'bugtracker.github' => 1,
-                'repository.github' => [{ user => 'xdbr' }],
-                'homepage' => 'https://metacpan.org/module/%{dist}',
+            # 'AutoMetaResources' => {
+            #     'bugtracker.github' => 1,
+            #     'repository.github' => [{ user => 'xdbr' }],
+            #     'homepage' => 'https://metacpan.org/module/%{dist}',
+            # },
+            'GithubMeta' => {
+                issues => 1,
             },
             '@Git'      => {
                 changelog        => 'Changes'      ,       # this is the default
