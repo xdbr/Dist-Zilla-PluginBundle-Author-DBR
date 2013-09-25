@@ -30,6 +30,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 CheckVersionIncrement
                 ConfirmRelease
                 EOLTests
+                GithubMeta
                 HasVersionTests
                 InstallGuide
                 MetaJSON
@@ -58,13 +59,6 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'Authority' => {
                 authority => 'cpan:DBR'
             },
-            # 'AutoMetaResources' => {
-            #     'homepage'        => 'https://metacpan.org/module/%{dist}',
-            #     'repository.type' => 'git',
-            #     'repository.url'  => 'git://github.com/xdbr/%{dist}.git',
-            #     'repository.web'  => 'http://github.com/xdbr/%{dist}',
-            #     'bugtracker.web'  => 'http://github.com/xdbr/%{dist}/issues',
-            # },
             'AutoMetaResources' => {
                 'bugtracker.github' => 1,
                 'repository.github' => [{ user => 'xdbr' }],
@@ -114,13 +108,14 @@ This PluginBundle is roughly equivalent to the following C<dist.ini>:
     [Authority]
     authority        = cpan:DBR
 
-    ; [AutoMetaResources]
-    ; homepage            = https://metacpan.org/module/%{dist}
-    ; repository.type     = git
-    ; repository.url      = git://github.com/xdbr/%{dist}.git
-    ; repository.web      = http://github.com/xdbr/%{dist}
-    ; bugtracker.web      = http://github.com/xdbr/%{dist}/issues
+    [AutoMetaResources]
+    homepage            = https://metacpan.org/module/%{dist}
+    repository.type     = git
+    repository.url      = git://github.com/xdbr/%{dist}.git
+    repository.web      = http://github.com/xdbr/%{dist}
+    bugtracker.web      = http://github.com/xdbr/%{dist}/issues
 
+    GithubMeta
 
     [@Git]
     changelog        = Changes             ; this is the default
