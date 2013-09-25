@@ -58,12 +58,17 @@ class Dist::Zilla::PluginBundle::Author::DBR
             'Authority' => {
                 authority => 'cpan:DBR'
             },
+            # 'AutoMetaResources' => {
+            #     'homepage'        => 'https://metacpan.org/module/%{dist}',
+            #     'repository.type' => 'git',
+            #     'repository.url'  => 'git://github.com/xdbr/%{dist}.git',
+            #     'repository.web'  => 'http://github.com/xdbr/%{dist}',
+            #     'bugtracker.web'  => 'http://github.com/xdbr/%{dist}/issues',
+            # },
             'AutoMetaResources' => {
-                'homepage'        => 'https://metacpan.org/module/%{dist}',
-                'repository.type' => 'git',
-                'repository.url'  => 'git://github.com/xdbr/%{dist}.git',
-                'repository.web'  => 'http://github.com/xdbr/%{dist}',
-                'bugtracker.web'  => 'http://github.com/xdbr/%{dist}/issues',
+                'bugtracker.github' => 1,
+                'repository.github' => [{ user => 'xdbr' }],
+                'homepage' => 'https://metacpan.org/module/%{dist}',
             },
             '@Git'      => {
                 changelog        => 'Changes'      ,       # this is the default

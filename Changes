@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+    - Let's try AutoMetaResources on this module itself
+
+1.0.0     2013-09-25 20:41:52 Europe/Berlin
+
     - Remove [AutoMetaResources] again, seems to not work in vanilla dist.
     - Let's just try again with AutoMetaResources
     - Change to semantic versioning
