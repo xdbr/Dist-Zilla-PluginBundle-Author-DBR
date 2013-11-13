@@ -222,7 +222,6 @@ This PluginBundle is roughly equivalent to the following C<dist.ini>:
     Dist::Zilla::Plugin::TestRelease                  = 0
     Dist::Zilla::PluginBundle::Git                    = 0
     Dist::Zilla::Role::PluginBundle::Merged           = 0
-    Pod::Weaver::Plugin::Encoding                     = 0
     Pod::Weaver::Plugin::WikiDoc                      = 0
     Test::CPAN::Meta                                  = 0
     Test::UseAllModules                               = 0
