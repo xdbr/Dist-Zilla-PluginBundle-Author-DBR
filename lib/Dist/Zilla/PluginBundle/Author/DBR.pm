@@ -33,6 +33,7 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 HasVersionTests
                 InstallGuide
                 MetaJSON
+                MetaYAML
                 MetaProvides::Class
                 MetaTests
                 ModuleBuild

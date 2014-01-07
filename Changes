@@ -1,4 +1,8 @@
 {{$NEXT}}
+
+  - Add DZ::Plugin::MetaYAML
+
+1.2.3     2014-01-04 11:29:55 Europe/Berlin
   
   - Merge pull request #1 from sergeyromanov/patch-1
 
