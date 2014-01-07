@@ -32,10 +32,8 @@ class Dist::Zilla::PluginBundle::Author::DBR
                 EOLTests
                 HasVersionTests
                 InstallGuide
-                MetaJSON
-                MetaYAML
-                MetaProvides::Class
                 MetaTests
+                MetaProvides::Package
                 ModuleBuild
                 NextRelease
                 NoTabsTests
